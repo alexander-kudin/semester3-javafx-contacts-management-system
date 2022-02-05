@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgba(0, 0, 0, 0.68);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ContactViewController">
+   <children>
+      <Label fx:id="fullNameLabel" layoutX="218.0" layoutY="50.0" text="Full Name" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="29.0" />
+         </font></Label>
+      <GridPane layoutX="70.0" layoutY="110.0" prefHeight="199.0" prefWidth="417.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="148.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="291.0" minWidth="10.0" prefWidth="269.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="23.0" prefWidth="224.0" text="Home Phone:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Email:" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Work Phone:" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Birthday:" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Street:" textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Notes:" textFill="WHITE" GridPane.rowIndex="6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+             <Label fx:id="homePhoneLabel" text="Label" textFill="WHITE" GridPane.columnIndex="1">
+                 <font>
+                     <Font size="14.0" />
+                 </font>
+             </Label>
+
+            <Label fx:id="workPhoneLabel" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+             <font>
+                 <Font size="14.0" />
+             </font>
+            </Label>
+             <Label fx:id="emailLabel" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                 <font>
+                     <Font size="14.0" />
+                 </font>
+             </Label>
+             <Label fx:id="birthdayLabel" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                 <font>
+                     <Font size="14.0" />
+                 </font>
+             </Label>
+             <Label fx:id="addressLabel" prefHeight="42.0" prefWidth="262.0" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                 <font>
+                     <Font size="14.0" />
+                 </font>
+             </Label>
+             <Label fx:id="notesLabel" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                 <font>
+                     <Font size="14.0" />
+                 </font>
+             </Label>
+            <Label fx:id="addressLabel2" layoutX="158.0" layoutY="122.0" prefHeight="42.0" prefWidth="262.0" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Address:" textFill="WHITE" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <ButtonBar layoutX="367.0" layoutY="331.0" prefHeight="40.0" prefWidth="173.0">
+        <buttons>
+          <Button fx:id="editBtn" mnemonicParsing="false" onAction="#editBtnClicked" style="-fx-background-color: rgb(255, 187,41);" text="Edit" />
+            <Button fx:id="closeBtn" mnemonicParsing="false" onAction="#closeBtnClicked" style="-fx-background-color: rgb(246,93,87);" text="Close" textFill="#fcfcfc" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

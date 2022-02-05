@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!-- JavaScript, Groovy and Clojure languages are supported (importing javaScript there) -->
+<!-- because of the javaScript does not support data types, the application becomes not user friendly -->
+<!--<?language javascript?>-->
+<!-- ONE NODE ONLY ON THE PARENTAL LEVEL – AnchorPane(layout node) -->
+<!-- xmlns – XML namespaces must be added to the root node to unlock more FXML attributes and elements (ids) -->
+<!-- fx:id – is a unique identifier of any node -->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="50.0" prefHeight="694.0" prefWidth="65.0" style="-fx-background-color: rgb(59,102,243);" />
+      <AnchorPane layoutX="65.0" prefHeight="50.0" prefWidth="959.0" style="-fx-background-color: #fff;">
+         <children>
+            <TextField fx:id="searchField" layoutX="45.0" layoutY="11.0" prefHeight="27.0" prefWidth="193.0" promptText="Search..." style="-fx-background-color: none;" />
+            <Button fx:id="exitBtn" layoutX="859.0" layoutY="13.0" mnemonicParsing="false" onAction="#exitBtnClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: rgb(246,93,87);" text="EXIT" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Light" size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="findBtn" layoutX="248.0" layoutY="12.0" mnemonicParsing="false" onAction="#findBtnClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: rgb(15,127, 254);" text="FIND" textFill="WHITE">
+               <font>
+                  <Font name="Tahoma" size="10.0" />
+               </font>
+            </Button>
+            <Label fx:id="searchErrorLabel" layoutX="340.0" layoutY="16.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableView" layoutX="100.0" layoutY="142.0" prefHeight="529.0" prefWidth="895.0">
+        <columns>
+          <TableColumn fx:id="colId" minWidth="35.0" prefWidth="35.0" text="ID:" />
+          <TableColumn fx:id="colName" minWidth="100.0" prefWidth="150.0" text="Name:" />
+            <TableColumn fx:id="colPhone" prefWidth="175.0" text="Phone:" />
+            <TableColumn fx:id="colEmail" prefWidth="215.0" text="Email:" />
+            <TableColumn fx:id="colBirthday" prefWidth="217.0" text="Birthday:" />
+            <TableColumn fx:id="colBirthday1" prefWidth="133.0" />
+        </columns>
+      </TableView>
+      <AnchorPane prefHeight="50.0" prefWidth="65.0" style="-fx-background-color: rgb(37,76,192);" />
+      <Label fx:id="contactlistLabel" layoutX="100.0" layoutY="82.0" prefHeight="30.0" prefWidth="374.0" style="-fx-font-weight: 700;" text="Contact Management System">
+         <font>
+            <Font name="Tahoma Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="690.0" prefHeight="29.0" prefWidth="231.0" style="-fx-font-weight: 700;" text="\@ Aleksandr Kuidn &amp; Oleksii Pedko">
+         <font>
+            <Font name="Tahoma" size="10.0" />
+         </font>
+      </Label>
+      <Button fx:id="viewInfoBtn" layoutX="834.0" layoutY="85.0" mnemonicParsing="false" onAction="#viewInfoBtnClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: rgb(59,102,243);" text="VIEW INFO" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="addNewBtn" layoutX="667.0" layoutY="85.0" mnemonicParsing="false" onAction="#addNewBtnClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: rgb(46,176,51);" text="+ ADD NEW" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteBtn" layoutX="919.0" layoutY="85.0" mnemonicParsing="false" onAction="#deleteBtnClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: rgb(250, 48,70);" text="DELETE" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="10.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorMessageLabel" layoutX="100.0" layoutY="119.0" textFill="#ff0202" />
+      <Button fx:id="refreshBtn" layoutX="751.0" layoutY="85.0" mnemonicParsing="false" onAction="#refreshBtnClicked" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: rgb(255, 187,41);" text="REFRESH" textFill="#0d0d0d">
+         <font>
+            <Font name="Roboto Light" size="10.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
